@@ -29,7 +29,7 @@
       x-data="{ showDocsNavigation: false }"
 >
 
-<x-hearder-banner :hasMenu="$hasMenu ?? false" />
+<x-header-banner :hasMenu="$hasMenu ?? false" />
 {{ $slot }}
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
 <script type="text/javascript">

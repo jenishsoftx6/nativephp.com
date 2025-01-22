@@ -3,6 +3,7 @@
 
         <div class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8">
             <main class="overflow-hidden lg:flex lg:flex-1 lg:flex-col">
+
                 @if(!empty($sidebarLeft))
                     <x-sidebar-left-navigation>
                         {{ $sidebarLeft }}

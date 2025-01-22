@@ -7,25 +7,28 @@ border-b border-gray-100 dark:border-0
     <div class="hidden lg:block">
         <x-alert/>
     </div>
-    <div class="
-    relative flex top-0 left-0 z-50
-    md:flex
-    items-center justify-between gap-6 px-6 py-3
-    mx-auto max-w-8xl
-    sm:py-4">
+
+    <div class="relative flex top-0 left-0 z-50
+        md:grid md:grid-cols-4
+        items-center justify-between gap-6 px-6 py-3
+        mx-auto max-w-8xl
+        sm:py-4">
         <a
             href="/"
-            class="inline-flex items-center gap-3 transition rounded hover:text-white/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-red-600"
+            class="inline-flex items-center transition rounded hover:text-white/80 focus:outline-none
+                max-md:w-32
+                focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-red-600"
         >
             <img src="{{ asset('logo.svg') }}" class="h-8 dark:hidden">
             <img src="{{ asset('logo-dark.svg') }}" class="hidden h-8 dark:block">
             <span class="sr-only">NativePHP</span>
         </a>
-        <div id="docsearch"></div>
 
-        <x-early-access-button class="hidden lg:block"/>
+        <div class="flex-1 md:col-span-2 lg:mx-16 xl:mx-32">
+            <div id="docsearch"></div>
+        </div>
 
-        <div class="hidden lg:flex items-center space-x-5">
+        <div class="hidden lg:flex items-center justify-end space-x-5">
 
             <a href="https://bsky.app/profile/nativephp.bsky.social" title="Bluesky">
                 <x-icons.bluesky class="size-5 text-black dark:invert hover:text-[#00aaa6] hover:invert-0"/>
